@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target: Exchange Rates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <h1>Currency pairs</h1>
+    <ul>
+    <% @source.each do |code, name| %>
+    <li><a href="/<%= code %>">Convert 1 <%= code %> to...</a></li>
+    <% end %>
+    </ul>
+  </body>
+</html>

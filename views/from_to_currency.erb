@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target: Exchange Rates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <h1>Convert <%= @original_currency %> to <%= @destination_currency %></h1>
+
+    <% if @conversion_result %>
+      <p>1 <%= @original_currency %> equals <%= @conversion_result %> <%= @destination_currency %>.</p>
+    <% else %>
+      <p>Could not retrieve conversion data.</p>
+    <% end %>
+
+    <p>Go <a href="/<%= @original_currency %>">back</a>.</p>
+  </body>
+</html>

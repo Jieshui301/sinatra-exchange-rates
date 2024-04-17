@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convert <%= @currency_symbol %></title>
+</head>
+<body>
+  <% if @error_message %>
+    <p><%= @error_message %></p>
+  <% else %>
+    <h1>Convert <%= @currency_symbol %></h1>
+    <ul>
+      <% @currency_symbols.each do |other_symbol| %>
+        <% unless other_symbol == @currency_symbol %>
+          <li>Convert <%= @currency_symbol %> to <%= other_symbol %>...</li>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
+</body>
+</html>
